@@ -2,7 +2,7 @@
 class BlogController extends BaseController	{
 	public function __construct()	{
 		$this->beforeFilter('guest',['only' => ['getLogin']]);
-		$this->beforeFilter('auth', ['only' = ['getLogout']]);
+		$this->beforeFilter('auth', ['only' => ['getLogout']]);
 	}
 	
 	public function getIndex()	{
