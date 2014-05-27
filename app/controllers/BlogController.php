@@ -1,16 +1,18 @@
 <?php
+
 class BlogController extends BaseController	{
 	public function __construct()	{
 		$this->beforeFilter('guest',['only' => ['getLogin']]);
 		$this->beforeFilter('auth', ['only' => ['getLogout']]);
 	}
 	
-	public function getIndex()	{
-		$post = Post::orderBy('id', 'desc')->paginate(10);
-		$posts->getEnvironment()->setViewName('pagination::simple');
-		$this->layout->title = 'Homa Page | Laravel Blog';
-		$this->layout->main = View::make('home')->nest('content', 'index', compact('posts'));
-	}
+public function getIndex()
+    {
+        $posts = Post::orderBy('id', 'desc')->paginate(10);
+        $posts->getEnvironment()->setViewName('pagination::simple');
+        $this->layout->title = 'Home Page | Laravel 4 Blog';
+        $this->layout->main = View::make('home')->nest('content', 'index', compact('posts'));
+    }
 	
 	public function getSearch()	{
 		$searchTerm = Input::get('s');
