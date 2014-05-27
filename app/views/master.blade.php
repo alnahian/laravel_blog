@@ -44,7 +44,7 @@
             <div class="sub-header">
                 <hgroup>
                     <h1>{{HTML::link('/','Laravel 4 Blog')}}</h1>
-                    <h2>Laravel 4 Simple Blog tutorial</h2>
+                    <h2>Laravel 4 Simple Blog</h2>
                 </hgroup>
             </div>
         </header>
